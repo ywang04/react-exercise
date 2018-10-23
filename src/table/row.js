@@ -34,7 +34,7 @@ class Row extends Component {
     if (nameFilter) {
       const result = contacts.filter((contact) => {
         const fullName = `${contact.firstName} ${contact.lastName}`;
-        return fullName === nameFilter;
+        return fullName.includes(nameFilter);
       });
       return this.renderContacts(result);
     }
